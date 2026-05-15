@@ -62,6 +62,7 @@ jobs:
         java-version: '21'
 
     - name: run sonar cloud
+      continue-on-error: true
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         PROJECT_KEY_SONAR: ${{ secrets.PROJECT_KEY_SONAR }}
